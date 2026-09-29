@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie — Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI-POWERED LEARNING ASSISTANT</p>
+        <h1>EduGenie</h1>
+        <p>Ask, understand, summarize, quiz yourself, and build a learning path.</p>
+      </div>
+      <span class="status-dot" title="EduGenie"></span>
+    </header>
+
+    <section class="card">
+      <label for="task">Choose a task</label>
+      <select id="task">
+        <option value="qa">Ask a Question</option>
+        <option value="explain">Explain a Topic</option>
+        <option value="quiz">Generate Quiz</option>
+        <option value="summarize">Summarize Text</option>
+        <option value="learn">Learning Path</option>
+      </select>
+
+      <label for="inputText">Your input</label>
+      <textarea id="inputText" rows="9" placeholder="Example: Explain photosynthesis in simple words."></textarea>
+      <div class="actions">
+        <button id="submitBtn">Generate</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+      </div>
+    </section>
+
+    <section id="resultCard" class="card result-card hidden">
+      <div class="result-header">
+        <h2 id="resultTitle">Result</h2>
+        <span id="resultType" class="pill"></span>
+      </div>
+      <div id="result" class="result"></div>
+    </section>
+
+    <footer>EduGenie • FastAPI + Google Gemini</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
